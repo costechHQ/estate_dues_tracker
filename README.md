@@ -1,5 +1,3 @@
-# Estate Union Dues Tracker
-
 ## About the Project
 
 The Estate Union Dues Tracker is a simple Python program designed to help a residents' association chairman keep track of members and their monthly union dues.
