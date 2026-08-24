@@ -17,3 +17,4 @@ def register_member(name, phone, house_no):
         "payments": []
     }
     return member_id
+
