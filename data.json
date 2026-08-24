@@ -1,12 +1,14 @@
 {
     "M001": {
+        "name": "ifeanyi",
+        "phone": "08182465431",
+        "house_no": "block a",
+        "payments": []
+    },
+    "M002": {
         "name": "Chris",
         "phone": "07032303470",
-        "payments": [
-            {
-                "month": "August",
-                "amount": 5000.0
-            }
-        ]
+        "house_no": "block b",
+        "payments": []
     }
 }

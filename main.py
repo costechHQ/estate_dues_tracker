@@ -19,8 +19,9 @@ while True:
     if choice == "1":
         name = input("Enter member name: ")
         phone = input("Enter phone number: ")
+        house_no = input("Enter house number: ")
 
-        members_id = member_manager.register_member(name, phone)
+        members_id = member_manager.register_member(name, phone, house_no)
 
         save_data(member_manager.members)
         members = member_manager.members

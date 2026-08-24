@@ -6,13 +6,14 @@ members = {
     # }
 }
 
-def register_member(name, phone):
+def register_member(name, phone, house_no):
     """This fuction recieves names and phone number"""
     member_id = f"M{len(members) + 1:03d}"
 
     members[member_id] = {
         "name": name,
         "phone": phone,
+        "house_no": house_no,
         "payments": []
     }
     return member_id
