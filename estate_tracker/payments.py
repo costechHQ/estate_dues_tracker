@@ -1,4 +1,5 @@
 def record_payment(members, members_id, month, amount):
+    """collecting payment"""
     if members_id not in members:
         return False
 
@@ -11,6 +12,7 @@ def record_payment(members, members_id, month, amount):
     return True
 
 def get_payment_history(members, member_id):
+    """payment history"""
     if member_id not in members:
         return None
 
@@ -19,6 +21,7 @@ def get_payment_history(members, member_id):
 from datetime import datetime
 
 def check_dues_status(members):
+    """checking weather or not a user has paid"""
     current_month = datetime.now().strftime("%B")
 
     results = {}

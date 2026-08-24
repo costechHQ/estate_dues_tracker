@@ -7,7 +7,7 @@ members = {
 }
 
 def register_member(name, phone):
-    
+    """This fuction recieves names and phone number"""
     member_id = f"M{len(members) + 1:03d}"
 
     members[member_id] = {
