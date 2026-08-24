@@ -28,3 +28,78 @@ while True:
         log_event(f"Registered member: {members_id} - {name}")
 
         print(f"Member registered successfully. ID: {members_id}")
+
+    elif choice == "2":
+        members_id = input("Enter member ID: ")
+        month = input("Enter payment month: ")
+        amount = input("Enter amount: ")
+
+        try:
+            amount = float(amount)
+        except ValueError:
+            print("Amount must be a number.")
+            continue
+
+        success = record_payment(
+            members,
+            members_id,
+            month,
+            amount
+        )
+
+        if success:
+            save_data(members)
+            log_event(
+                f"Payment recorded: {members_id} - {month} - NGN{amount}"
+            )
+            print("Payment recorded successfully.")
+        else:
+            print("Member ID not found.")
+
+    elif choice == "3":
+        if not members:
+            print("No members registered.")
+        else:
+            for member_id, member in members.items():
+                print(
+                    f"{members_id} - "
+                    f"{member['name']} - "
+                    f"{member['phone']}"
+                )
+
+    elif choice == "4":
+        results = check_dues_status(members)
+
+        if not results:
+            print("No members registered.")
+        else:
+            for member_id, status in results.items():
+                print(
+                    f"{members_id} - "
+                    f"{members[member_id]['name']}"
+                    f"{status}"
+                )
+
+    elif choice == "5":
+        member_id = input("Enter member ID: ")
+
+        history = get_payment_history(members, member_id)
+
+        if history is None:
+            print("Member ID not found.")
+        elif not history:
+            print("This member has no payment history.")
+        else:
+            print(f"\nPayment history for {members[member_id]['name']}")
+
+            for payment in history:
+                print(
+                    f"Month: {payment['month']} | "
+                    f"Amount: NGN{payment['amount']}"
+                )
+
+    elif choice == "6":
+        print("Goodbye!")
+        break
+    else:
+        print("Invalid option. Please choose 1-6.")
