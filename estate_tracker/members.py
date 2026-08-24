@@ -1,9 +1,9 @@
 members = {
-    "M001": {
-        "name": "Christopher Simon",
-        "phone": "07032303470",
-        "payments": []
-    }
+    # "M001": {
+    #     "name": "Christopher Simon",
+    #     "phone": "07032303470",
+    #     "payments": []
+    # }
 }
 
 def register_member(name, phone):
