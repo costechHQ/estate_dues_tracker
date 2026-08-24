@@ -75,8 +75,8 @@ while True:
         else:
             for member_id, status in results.items():
                 print(
-                    f"{members_id} - "
-                    f"{members[member_id]['name']}"
+                    f"{member_id} - "
+                    f"{members[member_id]['name']}\n"
                     f"{status}"
                 )
 

@@ -8,7 +8,7 @@ def record_payment(members, members_id, month, amount):
         "amount": amount
     }
 
-    members[members_id]["payements"].append(payment)
+    members[members_id]["payments"].append(payment)
     return True
 
 def get_payment_history(members, member_id):
@@ -32,5 +32,5 @@ def check_dues_status(members):
             for payment in member["payments"]
         )
 
-        results[member_id] = "Paid" if paid else "Not Paid"
+        results[member_id] = "Has Paid" if paid else "Has Not Paid"
         return results
